@@ -1,25 +1,29 @@
 const today = new Date('2023-08-21');
-let thisYear = document.getFullYear();
-const footer = document.querySelector(".<footer>");
+let thisYear = today.getFullYear();
+const footer = document.querySelector("footer");
  
 const copyright = document.createElement("p");
-copyright.innerHTML = "Stephanie Alvarado" + thisYear;
-document.footer.appendChild(copyright);
+copyright.innerHTML = "Stephanie Alvarado" + " " + thisYear;
+footer.appendChild(copyright);
 
 
-let skills = [Microsoft, Javascript, html, CSS, Lightroom];
-const skillsSection = document.getElementById('skills');
-const skillsList = document.skillsSection.querySelector('.<ul>');
+let skills = ["Microsoft Office", "Javascript", "html", "CSS", "Lightroom"];
+const skillsSection = document.querySelector('#skills');
+const skillsList = skillsSection.querySelector("ul");
+
 
 for (let i = 0; i < skills.length; i++) {
    let skill = document.createElement('li');
-   document.innerText += skills[i] + "<li>";
-    skillsList.appendChild(skill);
+   skill.innerText = (skills[i]);
+   skillsList.appendChild(skill);
+   console.log(skills);
   } 
+  //for loop skills section 
+
   
   let messageForm = document.getElementsByName("leave_message");
 
-  messageForm.addEventListener("submit", myFunction);
+  document.addEventListener("Submit", myFunction);
   
   function myFunction(event) {
 
