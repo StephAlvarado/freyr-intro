@@ -3,105 +3,46 @@
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stephanie's First Page</title>
-        <style>
-
-          h1{
-            color: aqua;
-            font-family: monospace;
-            font-size: xx-large;
-            font-weight: bolder;
-          }
-          h2{
-            color: aqua;
-            font-family: monospace;
-            font-size: large;
-            font-weight: bolder;
-          }
-          p{
-            color: white;
-            font-family: monospace;
-            font-size: large ;
-          }
-          section{
-            color: white;
-            font-family: monospace;
-            font-size: large;
-            padding: 30px;
-          }
-          ul{
-            list-style-type: square;
-            border: 3px solid rgb(245, 76, 203);
-            background-color:  rgb(240, 240, 177);
-          }
-          li{
-            margin: 5px;
-            background-color: rgb(162, 87, 233);
-          }
-
-          button{
-            padding: 3%;
-            background-color:  rgb(240, 240, 177);
-            border: 8px solid rgb(245, 76, 203);
-            column-gap: 20px;
-            
-          }
-          footer{
-            background-color:rgb(245, 76, 203) ;
-            border: 8px solid aqua;
-            padding: 2%;
-            word-spacing: 50%;
-          }
-        </style>
+        <style> </style>
         <meta>
         <link>
         <script></script>
         <base> 
         <link rel="stylesheet" href="css/index.css">
     </head>
+
     <body style="background-color: mediumslateblue;"> 
     <header>
       <div class="container">
         <nav class="navbar">
-          <a href="/" class="nav-branding" >Stephanie Alvarado</a>
+          <a href="/" class="nav-branding" style="font-size: x-large;" > Stephanie Alvarado </a>
           <ul class="nav-menu">
-            <li class="nav-link"><a href="/">About</a></li>
-            <li class="nav-link"><a href="/">Experience</a></li>
-            <li class="nav-link"><a href="/">Skills</a></li>
-            <li class="nav-link"><a href="/">Projects</a></li>
-            <li class="nav-link"><a href="/">Connect</a></li>
-            <li class="nav-link"><a href="/">Leave a Message</a></li>
-            
+            <li class="nav-link"><a href="#about">About</a></li>
+            <li class="nav-link"><a href="#experience">Experience</a></li>
+            <li class="nav-link"><a href="#skills">Skills</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#connect">Connect</a></li>
+            <li class="nav-link"><a href="#leave a message">Leave a Message</a></li>
             </ul>
         </nav>
       </div>
+      
     </header>
 
-
-
-
-
-
-    <section>
-      <div class="container">
-        <div class="Home">
-          <h1></h1>
-        </div>
-      </div>
-    </section>
-    
-    
-      <section>
+    <section id="about">
         <div class="container">
-          <div class="About">
-            <h2>About</h2>    
+          <div class="About"> 
+            <img src="./img:steph.jpg"> <img src="./img:cupcake.jpg"> <img src="./img:smartrabbit.jpg"> <img src="./img:musiccloud.jpg"> <img src="./img:catonbooks.jpg">
+
+            <h2>About</h2> <br> 
             <p> My name is Stephanie Alvarado. I am currently a student at Code the Dream. I am learning how to code! I strive to become proficient in JavaScript, HTML and CSS. After my Intro to Programming course I plan on taking Node/Express. The reason why I decided I wanted to learn programming is because I feel like it will open many doors for me. Although I went to school for Finance and Marketing I have always had a certain curiosity for programming. I love coding so far because even though it is a very complicated skill to learn it has really enhanced my reasoning and logical skills. It has also sharpened my ability to work with data and has taught me a new way of learning concepts. Some of the things I enjoy doing for leisure are reading, watching movies, listening to music, going to art museums, going to concerts and learning new things.
             </p>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2>Experience</h2> 
+      <section id="experience">
+        <h2>Experience</h2> <br>
         <div class="flex-grid">
               <div class="col">Waitress 2013-2015</div>
               <div class="col">Bartender 2016-2020</div>
@@ -115,7 +56,7 @@
         <section id="skills">
           <div class="container">
             <div class="Skills">
-              <h2>Skills</h2>
+              <h2>Skills</h2><br>
               <ul></ul>
             </div>
           </div>
@@ -123,14 +64,14 @@
 
     
         <section id="projects">
-          <h2>Projects</h2>
+          <h2>Projects</h2><br>
           <ul></ul>
         </section>
 
-        <section>
+        <section id="connect">
         <div class="container">
           <div class="Connect">
-            <h2>Connect</h2> 
+            <h2>Connect</h2> <br>
             <strong>Email: </strong> <a href="mailto:Stephya16@gmail.com"> Stephya16@gmail.com </a> <br>
             <strong>Linkedin:</strong> <a href="https://www.linkedin.com/in/stephaniealvaradogallegos/"> www.linkedin.com/in/stephaniealvaradogallegos</a> <br>
             <strong>Github:</strong><a href="https://github.com/StephAlvarado/freyr-intro"> StephAlvarado</a><br>
@@ -138,39 +79,39 @@
         </div>
       </section>   
 
-      <section> 
+      <section id="leave a message"> <br><br>
         <h2>Leave a Message</h2>
-        <form name="leave_message" class="message-form"><br>
-        <div class="flex-grid">
-           
-            <label for="usersName">Name</label>
-            <input class="col" style="padding: 2%;" type="text" name="usersName" required>
-            <label for="usersEmail">Email</label>
-            <input class="col" style="padding: 2%;" type="email" name="usersEmail" required>
-            <label for="usersMessage">Message</label>
-            <textarea class= "col" style="padding: 2%;"  name="usersMessage" required></textarea>
-            <button type="submit">Submit</button>
-          </form><br>
-        
-      
-        </div>
+
+        <form id="leave_message">
+       
+          <div>
+            <label for="usersName">Name</label><br>
+            <input class="col" style="padding: 2%;" type="text" name="usersName" required="true"><br>
+
+            <label for="usersEmail">Email</label><br>
+            <input class="col" style="padding: 2%;" type="email" name="usersEmail" required="true"><br>
+
+            <label for="usersMessage">Message</label><br>
+            <textarea class= "col" style="padding: 2%;"  name="usersMessage" required="true"></textarea><br>
+          </div>
+
+          <div class="submit-button">
+            <button  type="submit"  style="border: 3px solid aqua;">Submit</button>
+          </div>
+
+      </form>
+      //<p id="messageForm"></p>
       </section> 
 
       <section id="Messages">
-        <div class="container">
-          <div class="Messages">
-            <h2>Messages</h2>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        
+            <h2>Messages</h2><br>
+            <ul></ul>
       </section>
 
-      <footer></footer>   
+      <footer> </footer>  
+      
+
       <script src='js/index.js' defer> </script>
     </body>
+    </html>
     

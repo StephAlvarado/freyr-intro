@@ -19,55 +19,48 @@ for (let i = 0; i < skills.length; i++) {
   } 
   
 // Leave a Message
-  let messageForm = document.getElementsByName("leave_message");
+  const messageForm = document.forms.leave_message;
 
-  document.addEventListener("submit", myFunction);
-  
-  function myFunction(event) {
-
+  messageForm.addEventListener("submit", function(event){
     event.preventDefault();
-    let usersName = event.target.usersName;
-    let usersEmail = event.target.usersEmail;
-    let usersMessage = event.target.usersMessage;
-    console.log(event);
 
 
-    let messageSection = document.getElementById('#messages');
-    let messageList = messageSection.querySelector(".<ul>");
-    let newMessage = document.createElement('li');
-    newMessage.innerHTML = '<a>' + usersEmail + '<span>' + usersMessage;
+    let usersName = event.target.usersName.value;
+    console.log('Name:',usersName);
 
-    let removeButton = document.createElement('<button>');
-    removeButton.innerText = "Remove";
-    removeButton.setAttribute('type', 'button');
-    removeButton.addEventListener("click", function2);
+    let usersEmail = event.target.usersEmail.value;
+    console.log('Email:', usersEmail);
 
-    function function2(){
-      let entry = removeButton.parentNode;
-      entry.removeChild();
-      removeButton.appendChild(newMessage);
-      newMessage.appendChild(messageList);
-    }
-    document.getElementById("submit").reset();
-  }
-
-  // 6.1
-//let githubRequest= new XMLHttpRequest();
-//githubRequest.open('GET', "https://api.github.com/users/{StephAlvarado}/repos");
-//githubRequest.send();
-
-// did I add the correct link to open?
-
-//githubRequest.addEventListener('load', (event) =>{
-//let repositories = JSON.parse(githubRequest.response);
-//console.log(repositories);
-//});
-
-//don't know ig I'm doing JSON.parse correctly
+    let usersMessage = event.target.usersMessage.value;
+    console.log('Message:', usersMessage);
 
 
+    const messageSection = document.getElementById('messages');
+    const messageList = messageSection.querySelector("ul");
+    const newMessage = document.createElement('li');
+    newMessage.innerHTML = `
+    <a href="mailto:${usersEmail}">${usersName}</a>
+    <span>${usersMessage}</span>`
 
-//question about parse and event listener 
+    messageList.appendChild(newMessage);
+  
+
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'Remove';
+    removeButton.type = 'button';
+
+
+    newMessage.appendChild(removeButton);
+    removeButton.addEventListener('click', function(event) {
+      
+      const entry = removeButton.parentNode;
+      entry.remove();
+    });
+
+    
+messageForm.reset();
+  });
+
 
 
 
