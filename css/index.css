@@ -7,17 +7,18 @@ body{
     position: relative;
 }
 header{
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
-    background-color: pink;
+    background-color: rgb(245, 76, 203) ;
+    border: 8px solid aqua;
 }
 
 li{
     list-style: none;
 }
 a{
-    color: aliceblue;
+    color: white;
     text-decoration: none;
 }
 
@@ -43,7 +44,8 @@ a{
     justify-content:space-between ;
     align-items: center;
     gap: 3px;
-    background-color: aqua;
+    background-color: rgb(240, 240, 177);
+    border-color: rgb(240, 240, 177);
 }
 
 .nav-branding{
@@ -79,12 +81,15 @@ body{
 
 .flex-grid{
     margin: 0 0 20px 0;
+    column-gap: 20px;
+    
 }
 
 .col{
-    background: pink;
-    border: solid blueviolet;
+    background: rgb(245, 76, 203);
+    border: solid  rgb(240, 240, 177);
     padding: 10px;
+   
 }
 
 @media (max-width: 400px) {
