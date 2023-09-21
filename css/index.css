@@ -7,25 +7,83 @@ body{
     position: relative;
 }
 header{
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
-    background-color: pink;
+    background-color: rgb(245, 76, 203) ;
+    border: 8px solid aqua;
 }
 
-li{
+
+h1{
+    color: aqua;
+    font-family: monospace;
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+  h2{
+    color: aqua;
+    font-family: monospace;
+    font-size: large;
+    font-weight: bolder;
+  }
+  p{
+    color: white;
+    font-family: monospace;
+    font-size: large ;
+  }
+  section{
+    color: white;
+    font-family: monospace;
+    font-size: large;
+    padding: 30px;
+  }
+  ul{
+    list-style-type: square;
+    border: 3px solid rgb(245, 76, 203);
+    background-color:  rgb(240, 240, 177);
+  }
+  li{
+    margin: 5px;
+    background-color: rgb(162, 87, 233);
     list-style: none;
-}
-a{
-    color: aliceblue;
+  }
+
+  a{
+    color: white;
     text-decoration: none;
 }
+
+  button{
+    padding: 3%;
+    background-color:  rgb(240, 240, 177);
+    border: 8px solid rgb(245, 76, 203);
+    column-gap: 20px;
+    
+  }
+  footer{
+    background-color:rgb(245, 76, 203) ;
+    border: 8px solid aqua;
+    padding: 2%;
+    word-spacing: 50%;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgb(229, 248, 175) ;
+    object-position: right;
+  }
 
 
 .container{
     width: 1280px;
     margin: auto;
 }
+
+
 
 
 .navbar{
@@ -39,15 +97,17 @@ a{
 }
 
 .nav-menu{
-    display: flex;
+    display:flex;
     justify-content:space-between ;
     align-items: center;
     gap: 3px;
-    background-color: aqua;
+    background-color: rgb(240, 240, 177);
+    border-color: rgb(240, 240, 177);
+    
 }
 
 .nav-branding{
-    font-size: 1.5rem;
+    font-size: 1.0rem;
 }
 
 .home, .about, .experience, .skills, .connect{
@@ -59,8 +119,6 @@ a{
 .about,.connect{
     margin-top: 0;
 }
-
-
 
 .flex-grid{
     display: flex;
@@ -79,33 +137,24 @@ body{
 
 .flex-grid{
     margin: 0 0 20px 0;
+    column-gap: 20px;
+
+    
 }
 
 .col{
-    background: pink;
-    border: solid blueviolet;
+    background: rgb(245, 76, 203);
+    border: 6px solid  rgb(240, 240, 177);
     padding: 10px;
+   
 }
 
-@media (max-width: 400px) {
-    .flex-grid{
-      display: block;
-      .col {
-        width: 100%;
-        margin: 0 0 10px 0;
-      }
-    }
-}
 
 @media(max-width:1280px){
     .container{
         width: 100%;
     }
 }
-
-
-
-
 
 
 @media screen and (max-width:845px){
