@@ -54,7 +54,7 @@ fetch('https://api.github.com/users/StephAlvarado/repos')
 
    .catch(error => {
     console.error("Error fetching data:", error);
-});
+})
 
 // leave a message - section does not 
 const messageForm = document.getElementsByName("leave_message");
@@ -66,9 +66,9 @@ const messageForm = document.getElementsByName("leave_message");
     let usersEmail = event.target.usersEmail.value;
     let usersMessage = event.target.usersMessage.value; 
 
-    console.log(usersName1);
-    console.log(usersEmail1);
-    console.log(usersMessage1);
+    console.log(usersName);
+    console.log(usersEmail);
+    console.log(usersMessage);
 
     let messageSection = document.getElementById('messages');
     let messageList = messageSection.querySelector('ul');
@@ -97,37 +97,4 @@ let removeButton = document.createElement('button');
 
 
     messageForm.reset();
- })
-
-
- 
-
-   
-
-
-//
-   //
-
-
-   
-
-
-   //
-   //
-
-
-   
-
-   //let ListSize = document.querySelector('#messages ul').childElementCount;
-   //if (ListSize === 0){
-    //messageHeader.style.display = "none";
-    //} else {
-     //messageHeader.style.display = "";
-    //}
-
-  //});
-
-  //
-
-//});  
-
+ });
