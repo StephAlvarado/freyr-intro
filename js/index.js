@@ -57,31 +57,31 @@ fetch('https://api.github.com/users/StephAlvarado/repos')
 })
 
 // leave a message - section does not 
-const messageForm = document.getElementsByName("leave_message");
- messageForm.addEventListener("submit", (event) =>{
+///const messageForm = document.getElementsByName("leave_message");
+ ///messageForm.addEventListener("submit", (event) =>{
     
-    event.preventDefault();
+    ///event.preventDefault();
 
-    let usersName = event.target.usersName.value;
-    let usersEmail = event.target.usersEmail.value;
-    let usersMessage = event.target.usersMessage.value; 
+  ///  let usersName = event.target.usersName.value;
+  ///  let usersEmail = event.target.usersEmail.value;
+   /// let usersMessage = event.target.usersMessage.value; 
 
-    console.log(usersName);
-    console.log(usersEmail);
-    console.log(usersMessage);
+  ///  console.log(usersName);
+  ///  console.log(usersEmail);
+  ///  console.log(usersMessage);
 
-    let messageSection = document.getElementById('messages');
-    let messageList = messageSection.querySelector('ul');
-    let newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href=mailto: ${usersEmail}>${usersName}</a>
-    <span>${usersMessage}</span>`
-
-
+  ///  let messageSection = document.getElementById('messages');
+  ///  let messageList = messageSection.querySelector('ul');
+   /// let newMessage = document.createElement('li');
+  ///  newMessage.innerHTML = `<a href=mailto: ${usersEmail}>${usersName}</a>
+  ///  <span>${usersMessage}</span>`
 
 
-let removeButton = document.createElement('button');
-  removeButton.innerText = "Remove";
-  removeButton.type= "button";
+
+
+///let removeButton = document.createElement('button');
+ /// removeButton.innerText = "Remove";
+ /// removeButton.type= "button";
 
 
 ///when I run this code it erases my projects and skills section
@@ -96,5 +96,55 @@ let removeButton = document.createElement('button');
  // messageList.appendChild(newMessage);
 
 
-    messageForm.reset();
- });
+ ///   messageForm.reset();
+ ///});
+
+// Leave a Message
+let messageForm = document.querySelector('[name="leave_message"]');
+messageForm.addEventListener('submit', createMessage);
+
+
+function createMessage(event) {
+  event.preventDefault();
+
+
+  //  using target value allows to see what user is typing
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+  console.log(usersEmail);
+  console.log(usersName);
+  console.log(usersMessage);
+
+
+  // for declaring a variable const is better to use in this case
+  const messageSection = document.getElementById('messages');
+  const messageList = messageSection.querySelector('ul');
+  const newMessage = document.createElement('li');
+
+
+  // how message will look like
+  newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a>
+     "wrote:" <span>${usersMessage} </span> <br>`;
+
+// button remove
+const removeButton = document.createElement('button');
+removeButton.innerText = 'Remove';
+removeButton.setAttribute('type', 'button');
+removeButton.addEventListener('click', btnRemove);
+
+
+function btnRemove() {
+  const entry = removeButton.parentNode;
+  entry.remove();
+}
+
+
+newMessage.appendChild(removeButton);
+messageList.appendChild(newMessage);
+messageForm.reset();
+}
+
+
+
+
