@@ -1,4 +1,4 @@
-//footer/copyright
+//footer-copyright
 const today = new Date('2023-08-21');
 let thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
@@ -56,48 +56,6 @@ fetch('https://api.github.com/users/StephAlvarado/repos')
     console.error("Error fetching data:", error);
 })
 
-// leave a message - section does not 
-///const messageForm = document.getElementsByName("leave_message");
- ///messageForm.addEventListener("submit", (event) =>{
-    
-    ///event.preventDefault();
-
-  ///  let usersName = event.target.usersName.value;
-  ///  let usersEmail = event.target.usersEmail.value;
-   /// let usersMessage = event.target.usersMessage.value; 
-
-  ///  console.log(usersName);
-  ///  console.log(usersEmail);
-  ///  console.log(usersMessage);
-
-  ///  let messageSection = document.getElementById('messages');
-  ///  let messageList = messageSection.querySelector('ul');
-   /// let newMessage = document.createElement('li');
-  ///  newMessage.innerHTML = `<a href=mailto: ${usersEmail}>${usersName}</a>
-  ///  <span>${usersMessage}</span>`
-
-
-
-
-///let removeButton = document.createElement('button');
- /// removeButton.innerText = "Remove";
- /// removeButton.type= "button";
-
-
-///when I run this code it erases my projects and skills section
-
-
-//removeButton.addEventListener('click',(event) => {
-
-   //let entry = removeButton.parentNode;
-     // entry.remove();
-
-  //newMessage.appendChild(removeButton);
- // messageList.appendChild(newMessage);
-
-
- ///   messageForm.reset();
- ///});
 
 // Leave a Message
 let messageForm = document.querySelector('[name="leave_message"]');
