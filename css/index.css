@@ -79,7 +79,7 @@ h1{
 
 
 .container{
-    width: 1280px;
+    width: 1600px;
     margin: auto;
 }
 
@@ -97,7 +97,9 @@ h1{
 }
 
 .nav-menu{
-    display:flex;
+    position:relative;
+    display: flex;
+    flex-flow: row wrap;
     justify-content:space-between ;
     align-items: center;
     gap: 3px;
@@ -107,13 +109,15 @@ h1{
 }
 
 .nav-branding{
-    font-size: 1.0rem;
+    font-size: 3.0rem;
 }
+
 
 .home, .about, .experience, .skills, .connect{
     height: 720px;
     margin: 70px ;
     border: 1px solid black;
+    
 }
 
 .about,.connect{
@@ -122,6 +126,9 @@ h1{
 
 .flex-grid{
     display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+  
 }
 
 .flex-grid,.col{
@@ -150,6 +157,7 @@ body{
 }
 
 
+
 @media(max-width:1280px){
     .container{
         width: 100%;
@@ -157,8 +165,27 @@ body{
 }
 
 
+
 @media screen and (max-width:845px){
     .page-title{
     font-size: 90px;
 }
 }
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 175px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
